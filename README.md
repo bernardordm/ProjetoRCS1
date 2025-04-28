@@ -16,19 +16,6 @@ Sistema de alta performance para envio massivo de mensagens RCS usando Node.js e
 - Node.js 14+
 - Kafka 2.0+
 
-## Instalação
-
-```bash
-# Clone o repositório
-git clone https://github.com/seu-usuario/rcs-message-producer.git
-
-# Entre na pasta do projeto
-cd rcs-message-producer
-
-# Instale as dependências
-npm install
-```
-
 ## Configuração
 
 O sistema pode ser configurado através de variáveis de ambiente:
