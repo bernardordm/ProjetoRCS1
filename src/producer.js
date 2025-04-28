@@ -4,7 +4,7 @@ const fs = require('fs');
 const { promisify } = require('util');
 const path = require('path');
 
-// Configurações
+
 const KAFKA_BROKERS = process.env.KAFKA_BROKERS?.split(',') || ['localhost:9092'];
 const TOPIC = process.env.KAFKA_TOPIC || 'rcs-messages';
 const BATCH_SIZE = parseInt(process.env.BATCH_SIZE || '10000', 10);
@@ -14,14 +14,14 @@ const MAX_RETRIES = parseInt(process.env.MAX_RETRIES || '3', 10);
 const RETRY_DELAY = parseInt(process.env.RETRY_DELAY || '1000', 10);
 const DEAD_LETTER_FILE = process.env.DEAD_LETTER_FILE || './dead_letter_queue.json';
 
-// Métricas
+
 let messagesSent = 0;
 let batchesSent = 0;
 let retryAttempts = 0;
 let failedMessages = 0;
 let lastReportTime = Date.now();
 
-// Fila de reprocessamento (in-memory)
+
 let retryQueue = [];
 const writeFileAsync = promisify(fs.writeFile);
 const readFileAsync = promisify(fs.readFile);
