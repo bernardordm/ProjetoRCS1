@@ -1,0 +1,19 @@
+{
+  "name": "rcs-message-producer",
+  "version": "1.0.0",
+  "description": "Sistema de alta performance para envio massivo de mensagens RCS",
+  "main": "main.js",
+  "scripts": {
+    "start": "node main.js",
+    "dev": "nodemon main.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "dotenv": "^16.1.4",
+    "kafkajs": "^2.2.4",
+    "mongodb": "^6.16.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.0"
+  }
+}
